@@ -21,6 +21,15 @@ int main() {
 	loadimage(&img_mm, "assets\\26825.png",640,480);
 	//Êä³öÍ¼Æ¬
 	putimage(0, 0, &img_mm);
+	
+	//Í¸Ã÷ÌùÍ¼,ÑÚÂëÍ¼
+	IMAGE img_play;
+	IMAGE img_play_mask;
+	loadimage(&img_play, "assets\\26826.png", 100, 100);
+	loadimage(&img_play_mask, "assets\\26826_2.png", 100, 100);
+	putimage(50, 20, &img_play_mask,NOTSRCERASE);
+	putimage(50, 20, &img_play,SRCINVERT);
+
 	getchar();
 	return 0;
 }
